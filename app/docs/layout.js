@@ -1,4 +1,4 @@
-const Docs = () => {
+const DocsLayout = ({children}) => {
   return (
     <div className="mx-8">
       <button
@@ -30,7 +30,7 @@ const Docs = () => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto dark:bg-black">
-          <ul className=" font-medium">
+          <ul className="font-medium">
             <li>
               <div
                 className="flex items-center px-2 text-gray-900 rounded-lg dark:text-white"
@@ -40,6 +40,15 @@ const Docs = () => {
               </div>
             </li>
            
+            <li>
+              <a
+                href="#"
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-950 hover:underline"
+              >
+                
+                <span className="ml-3 text-sm">Introduction</span>
+              </a>
+            </li>
             <li>
               <a
                 href="#"
@@ -94,7 +103,8 @@ const Docs = () => {
       </aside>
 
       <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+        {children}
+        {/* <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
           <div className="grid grid-cols-3 gap-4 mb-4">
             <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
               <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
@@ -140,10 +150,10 @@ const Docs = () => {
               <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Docs;
+export default DocsLayout
