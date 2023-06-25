@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const DocsLayout = ({children}) => {
   return (
     <div className="mx-8">
@@ -41,22 +43,22 @@ const DocsLayout = ({children}) => {
             </li>
            
             <li>
-              <a
-                href="#"
+              <Link
+                href="/docs/introduction"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-950 hover:underline"
               >
                 
                 <span className="ml-3 text-sm">Introduction</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/docs/installation"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-950 hover:underline"
               >
                 
                 <span className="ml-3 text-sm">Installation</span>
-              </a>
+              </Link>
             </li>
           </ul>
 
